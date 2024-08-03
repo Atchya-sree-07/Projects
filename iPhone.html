@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags, title, and other head content -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/website.css">
+ <title>Main Page</title>
+ <style>
+   .card-item {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            
+        }
+
+        .rot {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            width: 400px;
+        }
+
+        .card img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card .buy-button {
+            background-color: #737a80;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .card .buy-button:hover {
+            background-color: #8b9196;
+        }
+
+        .card .learn-more {
+            display: block;
+            margin-top: 10px;
+            color: #0070c9;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+       
+ </style>
+  </head>
+<body>
+  <ul class="nav justify-content-center ">
+    <li class="nav-item">
+     
+        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+          </svg> <span class="sr-only"></span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Store</a> <div class="nav-list">
+
+    </div>  
+</li>
+</li>
+   <li class="nav-item dropdown">
+    <a class="nav-link " href="./iPad.html">iPad</a>    
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">iPad Pro</a>
+        <a class="dropdown-item" href="#">iPad pro Max</a>
+       
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link " href="./iPhone.html">iPhone</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item size" href="#">Explore All iphone</a>
+        <a class="dropdown-item font" href="#">iPhone 15 Pro</a>
+        <a class="dropdown-item font"  href="#">iPhone 15</a>
+        <a class="dropdown-item font" href="#">iPhone 14</a>
+        <a class="dropdown-item font" href="#">iPhone 13</a>
+        <a class="dropdown-item font" href="#">iPhone SE</a>
+        <a class="dropdown-item small" href="#">Compare iphone - switch <br> from  android</a>
+       
+   
+  </div>
+
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link " href="./Watch.html">Watch</a>
+      
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link " href="./Watch.html">Airpods</a>
+      
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="./Tv & Home.html">TV & Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="#">Entertainment</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./Accessories.html">Accessories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Support</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+      </svg></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+        </svg></a>
+      </li>
+    </li>
+  </ul>
+   
+<div class="container">
+  <div class="row">
+    <h1 class="col tile slide-up">
+      iPhone
+    </h1>
+    <div class="col iphone fs-3 slide-up">
+      designed to be loved.
+    </div>
+</div>
+</div>
+</div>
+<div class="slide-up">
+<img src="./Images/hero_endframe__e0ajd2ayxqc2_large.jpg" height="100%" width="100%">
+</div>
+<div class="col get fs-1 slide-up">
+  Get to know iPhone
+</div>
+
+<div class="grid-container">
+  <div class="grid-item">
+      <img src="./Images/windows-11-abstract-background-4k-phone-wallpaper-2160x3840-uhdpaper.com-52.0_b.jpg" alt="Photo 1">
+      <div class="text-overlay get fs-5">Advanced Camera <br>Selfie-Takers<br>Movie-Makers
+      </div>
+  </div>
+  <div class="grid-item">
+      <img src="./Images/windows-11-beautiful-landscape-phone-wallpaper-4k-uhdpaper.com-555@0@i.jpg" alt="Photo 2">
+      <div class="text-overlay get fs-5">Apple designed Chip<br>The kind of fast <br>you can feel.</div>
+  </div>
+  <div class="grid-item">
+      <img src="./Images/YwehkB.jpg" alt="Photo 8">
+      <div class="text-overlay get fs-5">Battery <br>The power of greate<br>battery life.</div>
+  </div>
+  <div class="grid-item">
+    <img src="./Images/4K Aesthetic Iphone Wallpaper.jfif" alt="Photo 8">
+    <div class="text-overlay get fs-5">Privacy <br>Your Data<br>Just where you want</div>
+  </div>
+</div>
+</div>
+<div class="col get fs-1 slide-up">
+  Explore the line-up
+</div>
+<div class="card-item">
+  <div class="card rot">
+      <img src="./Images/iphone_13__gnwdyqfq7i2y_large.png" alt="AirPods 2nd generation">
+      <h3>AirPods</h3>
+      <p>2nd generation</p>
+      <p class="price">₹12900.00</p>
+      <a href="#" class="buy-button">Buy</a>
+      <br>
+      <a href="#" class="learn-more">Learn more ></a>
+  </div>
+  <div class="card rot">
+      <img src="./Images/iphone_14__cjgvgyn9cquu_large.png" alt="AirPods 3rd generation">
+      <h3>AirPods</h3>
+      <p>3rd generation</p>
+      <p class="price">From ₹19900.00</p>
+      <a href="#" class="buy-button">Buy</a>
+      <br>
+      <a href="#" class="learn-more">Learn more ></a>
+  </div>  
+  <div class="card rot">
+      <img src="./Images/iphone_15__fm75iyqlkjau_large.png" alt="AirPods Pro 2nd generation">
+      <h3>AirPods Pro</h3>
+      <p>2nd generation </p>
+      <p class="price">₹24900.00</p>
+      <a href="#" class="buy-button">Buy</a>
+      <br>
+      <a href="#" class="learn-more">Learn more ></a>
+  </div>
+  <div class="card rot">
+      <img src="./Images/iphone_15_pro__bpnjhcrxofqu_large (1).png" alt="AirPods Max">
+      <h3>AirPods Max</h3>
+      <p>&nbsp;</p>
+      <p class="price">₹59900.00</p>
+      <br>
+      <a href="#" class="buy-button">Buy</a>
+      <a href="#" class="learn-more">Learn more ></a>
+  </div>
+  
+  
+</div>
+
+<div class="vet fs-1">
+  iPhone Essentials -
+</div>
+<div class="bag">
+  <div class="top">
+    <img src="./Images/magsafe__bfji5hb1mqsy_large.jpg"  height="100%" width="100% alt="Image 1">
+    
+  </div>
+  <div class="top">
+    <img src="./Images/airtag__b5lt0bcbd9ua_large.jpg"  height="100%" width="100% alt="Image 2">
+    
+  </div>
+</div>
+<div class="container">
+<div class="col get fs-1 slide-up">
+ <center>Take a look at our
+  latest models</center> 
+</div>
+
+
+<center> <img  class="model" src="./Images/all_colors__d4w03v51nwcy_large.jpg"  height="80%" width="80%"></center>
+</div>
+<div class="container ">
+  
+  <div class="row image-grid">
+    <div class="col-md-4">
+      <div class="image-container">
+       <center> <img src="./Images/product_tile_icon_a15__d6j18kowobgy_large.png" height="10%" width="10%" alt="Image 1"></center>
+        <div class="description">
+          <p>A17 Pro chip with 6-core GPU</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+        <center> <img src="./Images/product_tile_icon_a16__fo5o85ip3dui_large.png" height="10%" width="10%" alt="Image 2"></center>
+        <div class="description">
+          <p>A16 Bionic chip with 5-core GPU</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+        <center><img src="./Images/product_tile_icon_a17_pro__dpmksmevf1m6_large.png " height="10%" width="10%" alt="Image 3"></center>
+        <div class="description">
+            <p>A15 Bionic chip with 5-core GPU</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more columns as needed for additional images -->
+  </div>
+</div>
+<div class="container">
+   
+    <div class="row image-grid">
+      <div class="col-md-4">
+        <div class="image-container">
+            <center>   <img src="./Images/product_tile_icon_iphone_15_pro_camera__cmmp7qw3bkia_large.png" height="10%" width="10%" alt="Image 1"></center>
+          <div class="description">
+            
+            <p>Pro camera system <br>
+
+              Our most advanced 48MP Main camera<br>
+              
+              3x or 5x Telephoto camera<br>
+              
+              Ultra Wide camera</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <center>  <img src="./Images/product_tile_icon_iphone_15_camera__ua2m41hu16qe_large.png" height="10%" width="10%" alt="Image 2">  </center> 
+          <div class="description">
+            
+            <p>Advanced dual-camera system <br>
+
+              48MP Main camera<br>
+              
+              2x Telephoto<br>
+              
+              Ultra Wide camera.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <center>  <img src="./Images/product_tile_icon_a17_pro__dpmksmevf1m6_large.png " height="10%" width="10%" alt="Image 3"> </center> 
+          <div class="description">
+            
+            <p>Dual-camera system<br>
+
+              12MP Main camera<br>
+              
+              —Not available<br>
+              Ultra Wide camera.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more columns as needed for additional images -->
+    </div>
+  </div>
+  <div class="container">
+  
+    <div class="row image-grid">
+      <div class="col-md-4">
+        <div class="image-container">
+          <center>   <img src="./Images/product_tile_icon_battery_100__ftljxec3ftui_large.png" height="10%" width="10%" alt="Image 1">  </center> 
+          <div class="description">
+            
+            <p>Up to 26 hours video playback.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <center>  <img src="./Images/product_tile_icon_battery_100__ftljxec3ftui_large.png" height="10%" width="10%" alt="Image 2">  </center> 
+          <div class="description">
+            
+            <p>Up to 29 hours video playback.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <center>  <img src="./Images/product_tile_icon_battery_100__ftljxec3ftui_large.png " height="10%" width="10%" alt="Image 3">  </center> 
+          <div class="description">
+            
+            <p>Up to 26 hours video playback.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more columns as needed for additional images -->
+    </div>
+  </div>
+  <div class="col get fs-1 slide-up">
+    Why Apple is the best<br>
+    place to buy iPhone.
+   </div>
+  
+
+  <div class="container tik">
+    <div class="row">
+      <div class="col-md-4" >
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted fs-4">Save with apple trade <br> in.</h6>
+        <p class="card-text">Get ₹18000.00–₹62015.00 in credit towards iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.
+           </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted fs-4">Monthly payment options are available.</h6>
+        <p class="card-text">You can pay with credit or debit card, RuPay, UPI, Net Banking, and credit or debit card EMI with most leading banks.
+           </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+          
+            <h6 class="card-subtitle mb-2 text-muted fs-4">Get flexible delivery and easy pickup.</h6>
+        <p class="card-text">Get ₹18000.00–₹62015.00 in credit towards iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container space">
+    <div class="row">
+      <div class="col-md-4" >
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted fs-4">Save with apple trade <br> in.</h6>
+        <p class="card-text">Get ₹18000.00–₹62015.00 in credit towards iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.
+           </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted fs-4">Monthly payment options are available.</h6>
+        <p class="card-text">You can pay with credit or debit card, RuPay, UPI, Net Banking, and credit or debit card EMI with most leading banks.
+           </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+          
+            <h6 class="card-subtitle mb-2 text-muted fs-4">Get flexible delivery and easy pickup.</h6>
+        <p class="card-text">Get ₹18000.00–₹62015.00 in credit towards iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+ 
+    <div class=" tick">
+      <div class="col get fs-1 slide-up">
+       Significant Others.
+       </div>
+      <div class="row">
+        
+        <div class="col-md-2">
+          <ul class="list-group mb-4">
+            
+            <li class="list-group-item">Shop and Learn</li>
+            <li class="list-group-item">Store</li>
+            <li class="list-group-item">Mac</li>
+            <li class="list-group-item">iPad</li>
+            <li class="list-group-item">iPhone</li>
+            <li class="list-group-item">Watch</li>
+            <li class="list-group-item">AirPods</li>
+            <li class="list-group-item">TV & Home</li>
+            <li class="list-group-item">AirTag</li>
+            <li class="list-group-item">Accessories</li>
+            <li class="list-group-item">Gift Cards</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul class="list-group mb-4">
+            <li class="list-group-item">Apple Wallet</li>
+            <li class="list-group-item">Wallet</li>
+            <li class="list-group-item">Account</li>
+            <li class="list-group-item">Manage Your Apple ID</li>
+            <li class="list-group-item">Apple Store Account</li>
+            <li class="list-group-item">iCloud.com</li>
+            <li class="list-group-item">Entertainment</li>
+            <li class="list-group-item">Apple One</li>
+            <li class="list-group-item">Apple TV+</li>
+            <li class="list-group-item">Apple Music</li>
+            <li class="list-group-item">Apple Arcade</li>
+            <li class="list-group-item">Apple Podcasts</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul class="list-group mb-4">
+            <li class="list-group-item">Apple Books</li>
+            <li class="list-group-item">App Store</li>
+            <li class="list-group-item">Apple Store</li>
+            <li class="list-group-item">Find a Store</li>
+            <li class="list-group-item">Genius Bar</li>
+            <li class="list-group-item">Today at Apple</li>
+            <li class="list-group-item">Group Reservations</li>
+            <li class="list-group-item">Apple Camp</li>
+            <li class="list-group-item">Apple Trade In</li>
+            <li class="list-group-item">Ways to Buy</li>
+            <li class="list-group-item">Recycling Programme</li>
+            <li class="list-group-item">Order Status</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul class="list-group mb-4">
+            <li class="list-group-item">Shopping Help</li>
+            <li class="list-group-item">For Business</li>
+            <li class="list-group-item">Apple and Business</li>
+            <li class="list-group-item">Shop for Business</li>
+            <li class="list-group-item">For Education</li>
+            <li class="list-group-item">Apple and Education</li>
+            <li class="list-group-item">Shop for Education</li>
+            <li class="list-group-item">Shop for University</li>
+            <li class="list-group-item">For Healthcare</li>
+            <li class="list-group-item">Apple in Healthcare</li>
+            <li class="list-group-item">Health on Apple Watch</li>
+            <li class="list-group-item">Apple Values</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul class="list-group mb-4">
+            <li class="list-group-item">Accessibility</li>
+            <li class="list-group-item">Education</li>
+            <li class="list-group-item">Environment</li>
+            <li class="list-group-item">Privacy</li>
+            <li class="list-group-item">Supply Chain</li>
+            <li class="list-group-item">About Apple</li>
+            <li class="list-group-item">Newsroom</li>
+            <li class="list-group-item">Apple Leadership</li>
+            <li class="list-group-item">Career Opportunities</li>
+            <li class="list-group-item">Investors</li>
+            <li class="list-group-item">Ethics & Compliance</li>
+            <li class="list-group-item">Events</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    // Add hover functionality to Bootstrap dropdown
+    $('.nav-item.dropdown').hover(function() {
+      $(this).addClass('show');
+      $(this).find('.dropdown-menu').addClass('show');
+    }, function() {
+      $(this).removeClass('show');
+      $(this).find('.dropdown-menu').removeClass('show');
+    });
+  });
+</script>
+<script>
+  // Trigger the animation when the document is ready
+  $(document).ready(function() {
+    $('.slide-up').addClass('active');
+  });
+</script>
+
+</body>
+
+</html>

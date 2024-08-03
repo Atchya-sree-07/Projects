@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Zoom-out Animation on Page Load</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  
+  <style>
+    body{
+      background-color: rgb(245, 245, 247) !important
+    }
+    .zoom-out {
+      transform: scale(1.2); /* Start with 100% scale */
+      transition: transform 0.5s ease-out; /* Smooth transition */
+    }
+    .zoom-out.active {
+      transform: scale(0.8); /* Zoom out to 80% size */
+    }
+    .nav{
+      text-size-adjust: 10px;
+      
+    }
+    .get{
+        font-size: 60px;
+        line-height: 1.0625;
+        font-weight: 620;
+        letter-spacing: -0.010em;
+        margin-top: 40px;
+        color:rgb(36, 32, 32);
+    }
+    .bet{
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 620;
+        letter-spacing: -0.010em;
+        margin-top: 65px;
+        color:rgb(158, 151, 151);
+    }
+    .slide-up {
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100%);
+      }
+    } 
+    .nav-item{
+      font-size: 14px;
+    
+    }
+    
+    .nav-item .dropdown-menu {
+      display: block;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      border-radius: 0.50rem;
+     
+    }
+    .nav-link{
+        color: rgb(0, 0, 0);
+    }
+   
+
+    .nav-item.show .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      border-radius: 0.50rem; 
+      height:250px;
+      width:250px;
+
+    }
+    .nav-item .dropdown-toggle::after {
+      display: none !important; /* Hide the caret icon */
+      
+    }
+    .bag {
+      display: flex;
+      justify-content: space-between;
+      gap:20px;
+      
+    }
+  
+    .top {
+      position: relative;
+      background-color: white;
+      height: 850px;
+      width: 800px;
+      border-radius: 50px;
+      /* Adjust as needed for spacing */
+    }
+    .top img {
+     margin-top: 300px;
+    
+   }
+   .mop {
+      position: relative;
+      background-color: white;
+      height: 850px;
+      width: 800px;
+      border-radius: 50px;
+      /* Adjust as needed for spacing */
+    }
+    .mop img {
+     margin-top: 300px;
+    
+   }
+   .net{
+        margin-bottom: 650px;
+        font-size: 50px;
+        line-height: 1.0625;
+        font-weight: 600;
+        letter-spacing: -0.009em;
+        padding: 50px;
+        color:rgb(48, 43, 43);
+    }
+    .ret{
+        margin-bottom: 650px;
+        font-size: 70px;
+        line-height: 1.0625;
+        font-weight: 600;
+        letter-spacing: -0.009em;
+        padding: 40px;
+        background: -webkit-linear-gradient(hsl(27, 76%, 64%), #9248a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    .text-overlay {
+      position: absolute;
+        top: 50px;
+      left: 50px;
+     line-height: 70px;
+     background: -webkit-linear-gradient(#68cac5, #9248a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 40px;
+      text-align: justify;
+  }
+  .tap{
+    background-color: white;
+      height: 800px;
+      width: 1600px;
+      padding-left: 80px;
+  }
+  .over {
+    position: absolute;
+        top: 2250px;
+      left: 50px;
+     line-height: 35px;
+     background: -webkit-linear-gradient(#c5ebee, #5c4461);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      text-align: center;
+  }
+  .map{
+     background-color: white;
+      height: 1000px;
+      width: 1600px;
+      padding-left: 80px;
+  }
+.list-group{
+  margin-left: 80px;
+}
+.row{
+  margin-top: 1200px;
+}
+  </style>
+</head>
+<body>
+  <ul class="nav justify-content-center ">
+    <li class="nav-item">
+     
+        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+          </svg> <span class="sr-only"></span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Store</a> <div class="nav-list">
+
+    </div>  
+</li>
+</li>
+   <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="./iPad.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        iPad
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="./iPhone.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Iphone
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item size" href="#">Explore All iphone</a>
+        <a class="dropdown-item font" href="#">iPhone 15 Pro</a>
+        <a class="dropdown-item font"  href="#">iPhone 15</a>
+        <a class="dropdown-item font" href="#">iPhone 14</a>
+        <a class="dropdown-item font" href="#">iPhone 13</a>
+        <a class="dropdown-item font" href="#">iPhone SE</a>
+        <a class="dropdown-item small" href="#">Compare iphone - switch <br> from  android</a>
+       
+   
+  </div>
+
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="./Watch.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Watch
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Airpods
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="./Tv & Home.html">TV & Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="#">Entertainment</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./Accessories.html">Accessories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Support</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+      </svg></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+        </svg></a>
+      </li>
+    </li>
+  </ul>
+  <div class="container mt-2">
+   <center> <img src="./Images/Speaker.jpg" class="img-fluid zoom-out" alt="Zoom-out Image"></center>
+  </div>
+  <div class="col get slide-up ">
+    <center>The future hits home.</center> 
+   </div>
+   <div class="col bet slide-up ">
+    <center>Simply connect your favourite devices and transform your house into a remarkably smart, <br>convenient and entertaining home. Elevate movie night with theatre-like picture and sound. <br>Play any song, in any room, from anywhere. And control lights, locks and thermostats using Siri.<br> All with the security and privacy of Apple..</center> 
+   </div>
+   <div class="bag ">
+    <div class="top">
+      <img src="./Images/apple_tv_4k__b30wcqp0pdle_large.jpg"   alt="Image 1">
+      <div class="text-overlay net ">Apple TV 4K <br>The ultimate TV<br>experience is calling.</div>
+      
+    </div>
+    <div class="mop">
+      <img src="./Images/homeapp__cpc1k972xys2_large.jpg"  alt="Image 2">
+      <div class="text-overlay net ">Home app <br> The foundation <br> For a smarter home.</div>
+      
+    </div>
+  </div>
+  <div class=" mt-3 tap">
+     <img src="./Images/sound_connectivity__chzmwsudor0i_large.jpg" class="img-fluid zoom-out" alt="Zoom-out Image">
+     <div class="over net ">Pick up an incoming call from your iPhone, kick back with your favourite shows on Apple TV, listen to music on your Mac <br> HomePod mini works effortlessly with all your Apple devices and experiences to take your sound to the next level. <br> You can even create a stereo pair — two HomePod mini speakers paired in the same room create left and right channels for fully immersive audio.</div>
+
+   </div>
+   <div class="map">
+    <img src="./Images/sound_handoff__c0nz1ab2mmwm_large.jpg" class="img-fluid zoom-out" alt="Zoom-out Image">
+  </div>
+  <div class="col ret slide-up ">
+    <center> Siri does everything like there’s nothing to it.</center> 
+   </div>
+  </div>
+  <div class="row">
+        
+    <div class="col-md-2">
+      <ul class="list-group mb-4">
+        
+        <li class="list-group-item">Shop and Learn</li>
+        <li class="list-group-item">Store</li>
+        <li class="list-group-item">Mac</li>
+        <li class="list-group-item">iPad</li>
+        <li class="list-group-item">iPhone</li>
+        <li class="list-group-item">Watch</li>
+        <li class="list-group-item">AirPods</li>
+        <li class="list-group-item">TV & Home</li>
+        <li class="list-group-item">AirTag</li>
+        <li class="list-group-item">Accessories</li>
+        <li class="list-group-item">Gift Cards</li>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Apple Wallet</li>
+        <li class="list-group-item">Wallet</li>
+        <li class="list-group-item">Account</li>
+        <li class="list-group-item">Manage Your Apple ID</li>
+        <li class="list-group-item">Apple Store Account</li>
+        <li class="list-group-item">iCloud.com</li>
+        <li class="list-group-item">Entertainment</li>
+        <li class="list-group-item">Apple One</li>
+        <li class="list-group-item">Apple TV+</li>
+        <li class="list-group-item">Apple Music</li>
+        <li class="list-group-item">Apple Arcade</li>
+        <li class="list-group-item">Apple Podcasts</li>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Apple Books</li>
+        <li class="list-group-item">App Store</li>
+        <li class="list-group-item">Apple Store</li>
+        <li class="list-group-item">Find a Store</li>
+        <li class="list-group-item">Genius Bar</li>
+        <li class="list-group-item">Today at Apple</li>
+        <li class="list-group-item">Group Reservations</li>
+        <li class="list-group-item">Apple Camp</li>
+        <li class="list-group-item">Apple Trade In</li>
+        <li class="list-group-item">Ways to Buy</li>
+        <li class="list-group-item">Recycling Programme</li>
+        <li class="list-group-item">Order Status</li>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Shopping Help</li>
+        <li class="list-group-item">For Business</li>
+        <li class="list-group-item">Apple and Business</li>
+        <li class="list-group-item">Shop for Business</li>
+        <li class="list-group-item">For Education</li>
+        <li class="list-group-item">Apple and Education</li>
+        <li class="list-group-item">Shop for Education</li>
+        <li class="list-group-item">Shop for University</li>
+        <li class="list-group-item">For Healthcare</li>
+        <li class="list-group-item">Apple in Healthcare</li>
+        <li class="list-group-item">Health on Apple Watch</li>
+        <li class="list-group-item">Apple Values</li>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Accessibility</li>
+        <li class="list-group-item">Education</li>
+        <li class="list-group-item">Environment</li>
+        <li class="list-group-item">Privacy</li>
+        <li class="list-group-item">Supply Chain</li>
+        <li class="list-group-item">About Apple</li>
+        <li class="list-group-item">Newsroom</li>
+        <li class="list-group-item">Apple Leadership</li>
+        <li class="list-group-item">Career Opportunities</li>
+        <li class="list-group-item">Investors</li>
+        <li class="list-group-item">Ethics & Compliance</li>
+        <li class="list-group-item">Events</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.zoom-out').addClass('active');
+    });
+  </script>
+</body>
+</html>

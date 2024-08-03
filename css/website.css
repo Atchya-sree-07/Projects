@@ -1,0 +1,314 @@
+ body{
+      background-color: rgb(255, 255, 255) !important;
+      overflow-x: hidden;
+
+    }
+    .tile{
+      font-size: 64px;
+        line-height: 1.0625;
+        font-weight: 600;
+        letter-spacing: -0.009em;
+        padding: 30px;
+        color:rgb(48, 43, 43);
+        margin-right: 20px;
+        
+    }
+    .get{
+        font-size: 50px;
+        line-height: 1.0625;
+        font-weight: 600;
+        letter-spacing: -0.009em;
+        padding: 50px;
+        color:rgb(48, 43, 43);
+    }
+    .vet{
+    font-size: 50px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -0.009em;
+    padding: 25px;
+    margin-right: 870px;
+    }
+    
+  
+    .iphone{
+      font-weight: 600;
+      font-size: 50px;
+      padding:50px;
+      padding-left: 460px;
+      color: rgb(48, 43, 43);
+    }
+    .bag {
+      display: flex;
+      justify-content: space-between;
+      gap:10px;
+      margin: 50px;
+    }
+  
+    .top {
+      position: relative;
+      /* Adjust as needed for spacing */
+    }
+  
+    .top img {
+     
+      height: auto;
+      border-radius: 20px;
+      display: block;
+    }
+    
+  .nav{
+      text-size-adjust: 10px;
+      
+    }
+    /* Hide video controls */
+   
+    /* Animation for sliding video up */
+    .slide-up {
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100%);
+      }
+    } 
+    .video
+  {
+border-radius: 30px;
+overflow: hidden;
+z-index: 1;
+height: 580px;
+width: 1180px;
+margin-left: 7px;
+}
+    /* Custom CSS for animation */
+    .slide-up {
+      animation: slideUp 0.5s forwards;
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .nav-item{
+      font-size: 14px;
+    }
+    
+    .nav-item .dropdown-menu {
+      display: block;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      border-radius: 0.50rem;
+     
+    }
+
+    .nav-item.show .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      border-radius: 0.50rem; 
+      height:250px;
+      width:250px;
+
+    }
+    .nav-item .dropdown-toggle::after {
+      display: none !important; /* Hide the caret icon */
+      
+    }
+    
+    .font{
+      font-weight:0;
+      letter-spacing: 1px;
+     
+      font-optical-sizing: auto;
+      font-size: small;
+      font-style: normal;
+      
+    }
+    .size{
+      font-size:large;
+      font-weight:350;
+      letter-spacing: 1px;
+     
+      font-optical-sizing: auto;
+      
+      font-style: normal;
+ }
+ .small{
+      font-size:11px;
+      font-weight:400 px;
+      letter-spacing: 1px;
+     
+      font-optical-sizing: auto;
+      line-height: 25px;
+      font-style: normal;
+ }
+ .slide-up {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .slide-up.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .aes{
+    border-radius: 30px;
+  }
+  
+
+  .overlay .text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    padding-top: 60px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency as needed */
+  }
+
+  .overlay .text h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .overlay .text p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .tes{
+    margin-top:-580px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    line-height: 3px;
+  }
+  
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Adjust number of columns as needed */
+      gap: 10px; /* Gap between grid items */
+      padding: 30px;
+      border-bottom: 2px;
+    }
+  
+  .grid-item {
+      position: relative;
+  }
+  
+  .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+  }
+  
+  .text-overlay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+     line-height: 28px;
+      color: rgb(255, 255, 255);
+      padding: 5px 10px;
+      border-radius: 5px;
+      
+      
+  }
+  .model{
+    border-radius:10px ;
+    
+  }
+  .rope{
+    padding-left:400px;
+    border-top: 1px solid rgb(95, 91, 91);
+  
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust number of columns as needed */
+    gap: 25px; /* Gap between grid items */
+  
+      
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden; /* Ensure overflow is hidden to contain the text overlay */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Scale up the image slightly on hover */
+}
+.grid-item:hover .text-overlay {
+    bottom: 0; /* Slide the text overlay up on hover */
+}
+.continer{
+  padding: 100px;
+}
+
+.image-grid {
+margin-top: 20px;
+}
+.image-grid .col {
+margin-bottom: 20px;
+}
+.image-grid .image-container {
+position: relative;
+overflow: hidden;
+
+border-radius: 5px;
+}
+.image-grid img {
+display: block;
+transition: transform 0.3s ease;
+}
+.image-grid .image-container:hover img {
+transform: scale(1.1);
+}
+.image-grid .description {
+padding: 10px;
+text-align: center;
+}
+.description{
+font-size: 13px;
+}
+.card{
+    border-radius: 20px;
+   
+}
+.space{
+padding-top: 50px;
+
+}
+.tick{
+  margin-top: 50px;
+  
+  background-color: rgb(247, 247, 247);
+  width: 100%;
+}
+.list-group{
+  margin-left: 80px;
+}

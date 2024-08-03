@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid of Photos with Text</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="./css/website.css">
+
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+  }
+  
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Adjust number of columns as needed */
+      gap: 10px; /* Gap between grid items */
+  }
+  
+  .grid-item {
+      position: relative;
+  }
+  
+  .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+  }
+  
+  .text-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust number of columns as needed */
+    gap: 10px; /* Gap between grid items */
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden; /* Ensure overflow is hidden to contain the text overlay */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Scale up the image slightly on hover */
+}
+
+
+
+.grid-item:hover .text-overlay {
+    bottom: 0; /* Slide the text overlay up on hover */
+}
+
+  </style>
+</head>
+<body>
+    <div class=" video slide-up">
+        <div class="video-container" id="videoContainer">
+        <video id="myVideo" autoplay loop muted>
+        
+          <source src="./Images/large.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="./Images/Original-Iphone-Wallpaper-4K.jpg" alt="Photo 1">
+            <div class="text-overlay">Text for Photo 1</div>
+        </div>
+        <div class="grid-item">
+            <img src="./Images/black.jpg" alt="Photo 2">
+            <div class="text-overlay">Text for Photo 2</div>
+        </div>
+        <div class="grid-item">
+            <img src="./Images/YwehkB.jpg" alt="Photo 8">
+            <div class="text-overlay">Text for Photo 8</div>
+        </div>
+        <div class="grid-item">
+          <img src="./Images/wp13645134-4k-house-iphone-wallpapers.jpg" alt="Photo 8">
+          <div class="text-overlay">Text for Photo 8</div>
+        </div>
+    </div>
+</body>
+</html>
